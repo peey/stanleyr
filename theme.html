@@ -504,15 +504,15 @@ ol.notes li img{
 					<p><img src="{PostAuthorPortraitURL-64}" width="50px" height="50px" class="img-circle"> <ba>{PostAuthorName}</ba> {block:ContentSource}via <img src="http://g.etfv.co/{SourceURL}" width="16px" height="16px" class="img-circle">{SourceTitle}<ba></ba>{/block:ContentSource}</p> 
 					<p><bd>{block:Date}<a href="{Permalink}">{DayOfMonth}  {Month} {Year} </a>{/block:Date}</bd></p>
 					<a href="{URL}"><h4>{block:Title}{Title} {/block:Title}</h4></a>
-  <ul class="chat">
+ <dl class="dl-horizontal">
                             {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
+                           
                                     {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}{Line}
-                                </li>
+                                        <dt class="{Alt} user_{UserNumber}"><span class="label">{Label}</span></dt>
+                                    {/block:Label}<dd>{Line}</dd>
+                               
                             {/block:Lines}
-                        </ul>
+                        </dl>
 					<br>
 					<p>{block:HasTags}<bt>TAGS: {block:Tags} <a href="{TagURL}">{Tag}</a>{/block:Tags} </bt>{/block:HasTags} </p>
 					{block:PermalinkPage}<hr>{/block:PermalinkPage}
